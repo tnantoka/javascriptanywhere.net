@@ -5,3 +5,5 @@
 *~
 .*.sw*
 
+# Jekyll
+_site/

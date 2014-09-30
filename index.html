@@ -1,1 +1,116 @@
-JavaScript Anywhere
+---
+---
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>JavaScript Anywhere</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="http://fonts.googleapis.com/css?family=Titillium+Web" rel="stylesheet">
+  <link rel="stylesheet" href="vendor/bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="vendor/font-awesome/css/font-awesome.min.css">
+  <link rel="stylesheet" href="assets/style.css">
+  <link rel="shortcut icon" href="assets/favicon.ico"> 
+</head>
+<body>
+  <div class="container">
+    <header>
+      <p><img src="assets/logo.png"></p>
+      <h1>JavaScript Anywhere</h1>
+      <p class="lead">
+        In a moment of inspiration.
+      </p>
+    </header>
+
+    <ul class="nav nav-pills">
+      {% for device in site.devices %}
+        <li class="{% if device[0] == 'phone' %}active{% endif %}">
+          <a href="#{{ device[0] }}" data-toggle="tab">
+            {% if device[0] == 'phone' %}<i class="fa fa-fw fa-mobile fa-2x"></i>{% endif %}
+            {% if device[0] == 'pad' %}<i class="fa fa-fw fa-tablet fa-2x"></i>{% endif %}
+            {{ device[1] }}
+          </a>
+        </li>
+      {% endfor %}
+    </ul>
+
+    <div class="row">
+      <div class="tab-content">
+        {% for device in site.devices %}
+          <div class="tab-pane {% if device[0] == 'phone' %}active{% endif %}" id="{{ device[0] }}">
+            {% if device[0] == 'phone' %}
+              <div class="col-sm-4 col-sm-offset-4">
+            {% endif %}
+            {% if device[0] == 'pad' %}
+              <div class="col-sm-8 col-sm-offset-2">
+            {% endif %}
+
+              <div id="carousel-{{ device[0] }}" class="carousel slide" data-ride="carousel">
+                <ol class="carousel-indicators">
+                  {% for i in (0..3) %}
+                    <li data-target="#carousel-{{ device[0] }}" data-slide-to="{{ i }}" class="{% if i == 0 %}active{% endif %}"></li>
+                  {% endfor %}
+                </ol>
+
+                <div class="carousel-inner">
+                  {% for i in (1..4) %}
+                    <div class="item {% if i == 1 %}active{% endif %}">
+                      <a href="assets/{{ device[0] }}/{{ i }}.png">
+                        <img src="assets/{{ device[0] }}/{{ i }}.png" class="img-thumbnail">
+                      </a>
+                      <div class="carousel-caption">
+                      </div>
+                    </div>
+                  {% endfor %}
+                </div>
+
+                <a class="left carousel-control" href="#carousel-{{ device[0] }}" role="button" data-slide="prev">
+                  <span class="glyphicon glyphicon-chevron-left"></span>
+                </a>
+                <a class="right carousel-control" href="#carousel-{{ device[0] }}" role="button" data-slide="next">
+                  <span class="glyphicon glyphicon-chevron-right"></span>
+                </a>
+              </div>
+            </div>
+          </div>
+        {% endfor %}
+      </div>
+    </div>
+
+    <p>
+      <a href="https://itunes.apple.com/us/app/jsany-javascript-anywhere/id363452277"><img src="vendor/appstore.png"></a>
+    </p>
+
+    <ul class="list-inline">
+      <li><a href="https://twitter.com/jsanywhere"><i class="fa fa-fw fa-twitter"></i> Twitter</a></li>
+      <li><a href="https://www.facebook.com/javascriptanywhere"><i class="fa fa-fw fa-facebook"></i> Facebook</a></li>
+      <li><a href="mailto:tnantoka@javascriptanywhere.net"><i class="fa fa-fw fa-envelope-o"></i> E-mail</a></li>
+    </ul>
+
+    <footer>
+      <p>
+        <small>
+          &copy; 2010-2014 <a href="https://twitter.com/tnantoka">tnantoka</a>
+        </small>
+      </p>
+    </footer>
+  </div>
+
+  <script src="vendor/jquery-1.11.1.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+  <script src="assets/script.js"></script>
+
+<!--
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-55274767-1', 'auto');
+    ga('send', 'pageview');
+
+  </script>
+-->
+</body>
+</html>
