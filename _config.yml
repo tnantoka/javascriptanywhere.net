@@ -3,3 +3,8 @@ devices:
   phone: iPhone
   pad: iPad
   
+faq:
+  - title: It does not work on my Safari.
+    content: This app is just an editor for JavaScript programming. There is no effect for web contents on your browser apps.
+  - title: Forgot my password to lock projects.
+    content: Currently, JavaScript Anywhere is not a cloud app. Your credentials are saved only on your device. We have no way to remember it. Please re-install the app to continue using.

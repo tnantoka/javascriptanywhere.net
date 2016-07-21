@@ -1,0 +1,73 @@
+---
+---
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>{{ site.title }}</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href='https://fonts.googleapis.com/css?family=Play' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="vendor/bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="vendor/font-awesome/css/font-awesome.min.css">
+  <link rel="stylesheet" href="assets/style.css">
+  <link rel="shortcut icon" href="assets/favicon.ico"> 
+</head>
+<body>
+  <div class="container">
+    <header>
+      <p><a href="/"><img src="assets/logo.png"></a></p>
+      <h1>{{ site.title }}</h1>
+      <p class="lead">
+        In a moment of inspiration.
+      </p>
+    </header>
+
+    {{ content }}
+
+    <div class="fb-page" data-href="https://www.facebook.com/javascriptanywhere/" data-small-header="true" data-adapt-container-width="true" data-hide-cover="true" data-show-facepile="false"><div class="fb-xfbml-parse-ignore"><blockquote cite="https://www.facebook.com/javascriptanywhere/"><a href="https://www.facebook.com/javascriptanywhere/">JavaScript Anywhere</a></blockquote></div></div>
+
+    <ul class="list-inline">
+      <li><a href="https://twitter.com/jsanywhere"><i class="fa fa-fw fa-twitter"></i> Twitter</a></li>
+      <li><a href="https://www.facebook.com/javascriptanywhere"><i class="fa fa-fw fa-facebook"></i> Facebook</a></li>
+      <li><a href="mailto:tnantoka@javascriptanywhere.net"><i class="fa fa-fw fa-envelope-o"></i> E-mail</a></li>
+      <li><a href="/faq"><i class="fa fa-fw fa-question-circle"></i> FAQ</a></li>
+    </ul>
+
+    <footer>
+      <p>
+        <small>
+          &copy; 2010-2016 <a href="https://twitter.com/tnantoka">tnantoka</a>
+        </small>
+      </p>
+    </footer>
+  </div>
+
+  <script src="vendor/jquery-1.11.1.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+  <script src="assets/script.js"></script>
+
+  {% if site.safe %}
+    <div id="fb-root"></div>
+    <script>(function(d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) return;
+      js = d.createElement(s); js.id = id;
+      js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.5&appId=541298026028412";
+      fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));</script>
+
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-55274767-1', 'auto');
+      ga('send', 'pageview');
+
+    </script>
+
+    <script src="//j.wovn.io/0" data-wovnio="key=Vbqx9"></script>
+  {% endif %}
+</body>
+</html>
