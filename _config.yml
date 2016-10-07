@@ -2,16 +2,3 @@ title: JavaScript Anywhere
 devices:
   phone: iPhone
   pad: iPad
-  
-faq:
-  - title: It does not work on my Safari.
-    content: This app is just an editor for JavaScript programming. There is no effect for web contents on your browser apps.
-  - title: Forgot my password to lock projects.
-    content: Currently, JavaScript Anywhere is not a cloud app. Your credentials are saved only on your device. We have no way to remember it. Please re-install the app to continue using.
-  - title: How do I rename or copy (duplicate) a project?
-    content: Long tap a project on the list of projects.
-  - title: How do I sort (order) projects?
-    content: Tap the edit button on the upper left corner.
-  - title: How do I delete a project?
-    content: Tap the edit button on navigation bar, swipe left a project cell or long tap a project.
-
