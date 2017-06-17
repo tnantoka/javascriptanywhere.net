@@ -1,0 +1,28 @@
+<form>
+  <div class="form-group">
+    <div class="input-group">
+      <div class="input-group-addon">
+        <i class="fa fa-fw fa-search"></i>
+      </div>
+      <input type="text" class="form-control js-search">
+    </div>
+  </div>
+</form>
+<div class="panel-group" id="faq">
+  {% for q in page.faq %}
+  <div class="panel panel-default js-faq-panel">
+    <div class="panel-heading">
+      <h4 class="panel-title">
+        <a role="button" data-toggle="collapse" href="#faq_{{ forloop.index }}">
+          {{ q.title }}
+        </a>
+      </h4>
+    </div>
+    <div id="faq_{{ forloop.index }}" class="panel-collapse collapse">
+      <div class="panel-body">
+          {{ q.content }}
+      </div>
+    </div>
+  </div>
+  {% endfor %}
+</div>

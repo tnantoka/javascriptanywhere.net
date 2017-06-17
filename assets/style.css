@@ -1,11 +1,12 @@
 body {
   text-align: center;
   padding: 30px 0;
+  color: rgba(0, 0, 0, 0.87);
 }
 
 a {
   outline: none !important;
-  color: #4372aa;
+  color: 137DC4; 
 }
 
 h1 {
@@ -40,7 +41,7 @@ h1 {
 .nav-pills > li.active > a,
 .nav-pills > li.active > a:hover,
 .nav-pills > li.active > a:focus {
-  color: #000;
+  color: rgba(0, 0, 0, 0.87);
 }
 
 .nav-pills > li > a > i {
@@ -53,4 +54,32 @@ h1 {
 
 .carousel-control span {
   display: none !important;
+}
+
+.panel {
+  box-shadow: none;
+}
+
+.panel,
+.dropdown-menu,
+.img-thumbnail {
+  border-radius: 0 !important;
+}
+
+.appstore {
+  width: 200px;
+}
+
+.logo {
+  width: 120px;
+}
+
+.locale {
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.input-group-addon {
+  background: none;
 }

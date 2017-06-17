@@ -2,3 +2,13 @@ title: JavaScript Anywhere
 devices:
   phone: iPhone
   pad: iPad
+
+locales:
+  en:
+    lead: In a moment of inspiration.
+    faq: FAQ
+    mail: E-mail
+  ja:
+    lead: そのひらめき、忘れないうちに
+    faq: よくある質問
+    mail: メール
