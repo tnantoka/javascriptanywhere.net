@@ -4,7 +4,7 @@
 <html>
 <head>
   <meta charset="UTF-8">
-  <title>{% if page.title %}{{ page.title }} - {% endif %}{{ site.title }}</title>
+  <title>{% if page.title %}{{ page.title }} - {% endif %}{{ site.title }}{% unless page.title %} - {{ site.subtitle }}{% endunless %}</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link href='https://fonts.googleapis.com/css?family=Play' rel='stylesheet' type='text/css'>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
@@ -25,7 +25,7 @@
   <div class="container">
     <header>
       <p><a href="/"><img src="/assets/logo.png" class="logo"></a></p>
-      <h1>{{ site.title }}</h1>
+      <h1><a href="/">{{ site.title }}</a></h1>
       <p class="lead">
         {% if page.faq %}
           {{ site.locales[page.locale].faq }}

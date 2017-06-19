@@ -6,13 +6,27 @@ body {
 
 a {
   outline: none !important;
-  color: 137DC4; 
+  color: #137DC4;
+}
+
+a:hover,
+a:focus,
+a:active {
+  color: #1871B6;
 }
 
 h1 {
   font-family: 'Play', sans-serif;
   margin-top: 10px;
   margin-bottom: 5px;
+}
+
+h1 a:hover,
+h1 a:focus,
+h1 a:active,
+h1 a {
+  text-decoration: none !important;
+  color: inherit; !important;
 }
 
 .lead {
@@ -61,8 +75,7 @@ h1 {
 }
 
 .panel,
-.dropdown-menu,
-.img-thumbnail {
+.dropdown-menu {
   border-radius: 0 !important;
 }
 
@@ -89,4 +102,9 @@ h1 {
   background-color: #000;
   border-color: #000;
   opacity: 0.12;
+}
+
+.carousel {
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  padding: 2px;
 }
