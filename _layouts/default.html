@@ -24,8 +24,8 @@
   </div>
   <div class="container">
     <header>
-      <p><a href="/"><img src="/assets/logo.png" class="logo"></a></p>
-      <h1><a href="/">{{ site.title }}</a></h1>
+      <p><a href="/{% if page.locale == 'ja' %}ja/{% endif %}"><img src="/assets/logo.png" class="logo"></a></p>
+      <h1><a href="/{% if page.locale == 'ja' %}ja/{% endif %}">{{ site.title }}</a></h1>
       <p class="lead">
         {% if page.faq %}
           {{ site.locales[page.locale].faq }}
