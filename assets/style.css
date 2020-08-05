@@ -79,6 +79,14 @@ h1 a {
   border-radius: 0 !important;
 }
 
+.panel {
+  margin-bottom: 15px !important;
+}
+
+.panel-group {
+  margin-bottom: 100px;
+}
+
 .appstore {
   width: 200px;
 }
