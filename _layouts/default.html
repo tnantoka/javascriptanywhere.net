@@ -18,8 +18,8 @@
       <i class="fa fa-fw fa-globe"></i>
     </button>
     <ul class="dropdown-menu dropdown-menu-right">
-      <li class="{% if page.locale == 'en' %}active{% endif %}"><a href="/{% if page.faq %}faq{% endif %}{% if page.path %}{{ page.path }}{% endif %}">English</a></li>
-      <li class="{% if page.locale == 'ja' %}active{% endif %}"><a href="/ja/{% if page.faq %}faq{% endif %}{% if page.path %}{{ page.path }}{% endif %}">日本語</a></li>
+      <li class="{% if page.locale == 'en' %}active{% endif %}"><a href="/{% if page.faq %}faq{% elsif page.path %}{{ page.path }}{% endif %}">English</a></li>
+      <li class="{% if page.locale == 'ja' %}active{% endif %}"><a href="/ja/{% if page.faq %}faq{% elsif page.path %}{{ page.path }}{% endif %}">日本語</a></li>
     </ul>
   </div>
   <div class="container">
