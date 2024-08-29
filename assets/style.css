@@ -117,7 +117,8 @@ h1 a {
   padding: 2px;
 }
 
-.twitter-timeline {
-  margin-top: 20px !important;
-  border: 1px solid rgba(0, 0, 0, 0.12) !important;
+.twitter-container {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
 }
